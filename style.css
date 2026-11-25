@@ -1,0 +1,620 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(145deg, #ffe4ef, #e8d8ff, #fff0f5);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #70445f;
+}
+
+.game {
+    width: 100%;
+    max-width: 430px;
+    min-height: 100vh;
+    padding: 35px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+h1 {
+    font-size: 30px;
+    color: #a64d79;
+}
+
+.subtitle {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #956b91;
+}
+
+.bouquet {
+    width: 280px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flower {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    animation: sway 3s ease-in-out infinite;
+}
+
+.stem {
+    position: absolute;
+    width: 8px;
+    height: 150px;
+    background: #579b67;
+    left: 86px;
+    top: 115px;
+    border-radius: 10px;
+    transform: rotate(8deg);
+    transform-origin: top;
+}
+
+.center {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background: #ffd166;
+    border-radius: 50%;
+    left: 66px;
+    top: 66px;
+    z-index: 5;
+    box-shadow: 0 0 15px #ffca6a;
+}
+
+.petal {
+    position: absolute;
+    width: 55px;
+    height: 85px;
+    background: linear-gradient(145deg, #ff8fbd, #e94f91);
+    border-radius: 50% 50% 45% 45%;
+    left: 62px;
+    top: 0;
+    transform-origin: 28px 90px;
+    box-shadow: 0 3px 10px #d77da8;
+}
+
+button {
+    border: none;
+    padding: 17px 30px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #e96ba3, #b76bd8);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    box-shadow: 0 6px 18px #bd83b6;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+.wish {
+    min-height: 65px;
+    padding: 18px;
+    width: 100%;
+    background: #ffffffa8;
+    border-radius: 18px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.counter {
+    font-size: 14px;
+    color: #956b91;
+}
+
+@keyframes sway {
+    0%, 100% {
+        transform: rotate(-3deg);
+    }
+    50% {
+        transform: rotate(3deg);
+    }
+}
+
+/* PIXEL ART STYLE */
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background:
+        radial-gradient(circle at 20% 20%, #5d356f, transparent 40%),
+        radial-gradient(circle at 80% 80%, #9d4778, transparent 40%),
+        linear-gradient(135deg, #21152e, #392044, #24152e);
+    color: white;
+}
+.game {
+    background:
+        linear-gradient(
+            180deg,
+            #282044 0%,
+            #51416e 55%,
+            #93618a 100%
+        );
+}
+
+h1 {
+    color: #ffb9dc;
+    text-shadow: 3px 3px #7c3975;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    color: #f5c8ed;
+}
+
+.wish {
+    background: #332748;
+    border: 3px solid #d98cba;
+    color: #ffe4f3;
+    box-shadow: 4px 4px #17152d;
+    border-radius: 0;
+}
+
+button {
+    background: #d95c9b;
+    border: 3px solid #ffd0e8;
+    border-radius: 0;
+    box-shadow: 4px 4px #713b76;
+    font-family: monospace;
+}
+
+.counter,
+#timer {
+    color: #ffe1f2;
+}
+
+
+/* NEW PIXEL ROSE */
+
+.flower {
+    width: 180px;
+    height: 230px;
+    position: relative;
+    image-rendering: pixelated;
+    animation: pixelSway 3s ease-in-out infinite;
+}
+
+/* Стебель */
+.stem {
+    position: absolute;
+    width: 9px;
+    height: 130px;
+    left: 85px;
+    top: 100px;
+    background: #48a85c;
+    border-radius: 0;
+    transform: rotate(0deg);
+    box-shadow: 5px 0 #286d42;
+    z-index: 1;
+}
+
+/* Листья */
+.stem::before,
+.stem::after {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 15px;
+    background: #65c879;
+    box-shadow: 4px 4px #327b49;
+}
+
+.stem::before {
+    left: -27px;
+    top: 45px;
+    transform: rotate(25deg);
+}
+
+.stem::after {
+    left: 5px;
+    top: 75px;
+    transform: rotate(-25deg);
+}
+
+/* Лепестки */
+.petal {
+    position: absolute;
+    width: 38px;
+    height: 62px;
+    left: 71px;
+    top: 20px;
+    border-radius: 0;
+    transform-origin: 19px 70px;
+
+    background: #ff91c4;
+
+    box-shadow:
+        4px 0 #ed5b9e,
+        -4px 0 #ffb1d5,
+        0 -4px #ffb1d5,
+        4px 4px #c83d82;
+
+    image-rendering: pixelated;
+}
+
+/* Разные оттенки лепестков */
+.petal:nth-child(odd) {
+    background: #ffacd2;
+}
+
+.petal:nth-child(3n) {
+    background: #f76cae;
+}
+
+/* Серединка */
+.center {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 75px;
+    top: 73px;
+    border-radius: 0;
+    background: #ffdc65;
+
+    box-shadow:
+        4px 0 #e6a93f,
+        -4px 0 #ffe995,
+        0 4px #d99032,
+        4px 4px #b87929;
+
+    z-index: 5;
+}
+
+/* Покачивание */
+@keyframes pixelSway {
+    0%, 100% {
+        transform: rotate(-2deg);
+    }
+
+    50% {
+        transform: rotate(2deg);
+    }
+}
+
+/* REALISTIC ROSE */
+
+.flower {
+    width: 320px;
+    height: 300px;
+    animation: sway 4s ease-in-out infinite;
+}
+
+.realistic-rose {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    filter: drop-shadow(0 8px 8px #24132d66);
+}
+
+.rose-petal {
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+    cursor: pointer;
+}
+
+.rose-petal:hover {
+    filter: brightness(1.12);
+}
+
+/* Анимация падающего лепестка */
+
+.rose-petal {
+    transform-box: fill-box;
+    transform-origin: center;
+    transition:
+        transform 0.9s ease,
+        opacity 0.9s ease;
+}
+
+.rose-petal.falling {
+    animation: petalFall 0.8s ease-in forwards;
+    transform-origin: center;
+    pointer-events: none;
+}
+
+@keyframes petalFall {
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+        opacity: 1;
+    }
+
+    20% {
+        transform: translate(-15px, 30px) rotate(-45deg) scale(0.95);
+        opacity: 1;
+    }
+
+    45% {
+        transform: translate(20px, 75px) rotate(90deg) scale(0.85);
+        opacity: 0.85;
+    }
+
+    70% {
+        transform: translate(45px, 115px) rotate(190deg) scale(0.7);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translate(75px, 170px) rotate(360deg) scale(0.4);
+        opacity: 0;
+    }
+}}/* Анимация пожелания */
+
+.wish {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.wish.show {
+    opacity: 1;
+    transform: scale(1.05);
+    animation: wishAppear 0.8s ease-out;
+    text-shadow: 0 0 12px rgba(255, 150, 200, 0.7);
+}
+
+@keyframes wishAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) translateY(15px);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(1.08) translateY(-3px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1.05) translateY(0);
+    }
+}#pickButton {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ff8fbd, #d94b91);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 20px #e85b9b55;
+    transition: 0.3s ease;
+}
+
+#pickButton:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px #e85b9b88;
+}
+
+#pickButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.wish {
+    margin: 25px auto;
+    padding: 18px;
+    max-width: 300px;
+    min-height: 45px;
+    background: #ffffff12;
+    border: 1px solid #ffffff30;
+    border-radius: 18px;
+    color: #ffd5e8;
+    font-size: 17px;
+    line-height: 1.5;
+    box-shadow: 0 5px 20px #00000022;
+    backdrop-filter: blur(10px);
+}
+@media (max-width: 600px) {
+    .game {
+        width: 90%;
+        padding: 20px 10px;
+    }
+
+    .flower {
+        width: 210px;
+        height: 250px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    #pickButton {
+        width: 90%;
+        max-width: 300px;
+        padding: 16px;
+        font-size: 18px;
+    }
+
+    .wish {
+        width: 85%;
+        font-size: 16px;
+    }
+}
+#collectionButton {
+    display: block;
+    margin: 15px auto;
+    padding: 13px 25px;
+    border: 1px solid #f4a3c4;
+    border-radius: 25px;
+    background: #ffffff12;
+    color: #ffd5e8;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#collectionButton:hover {
+    background: #f4a3c433;
+    transform: translateY(-2px);
+}
+.collection {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    max-width: 400px;
+    max-height: 75vh;
+    overflow-y: auto;
+    padding: 25px;
+    box-sizing: border-box;
+    background: #35213f;
+    border: 1px solid #f4a3c4;
+    border-radius: 22px;
+    color: white;
+    text-align: center;
+    z-index: 100;
+    box-shadow: 0 10px 40px #00000088;
+}
+
+.collection h2 {
+    color: #ffb6d3;
+}
+
+.hidden {
+    display: none;
+}
+
+#closeCollection {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 20px;
+    background: #d94b91;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+.collection-item {
+    margin: 12px 0;
+    padding: 15px;
+    background: #ffffff12;
+    border: 1px solid #ffffff25;
+    border-radius: 15px;
+    text-align: left;
+}
+
+.collection-item p:first-child {
+    color: #ff9fc5;
+    font-size: 13px;
+}
+
+.collection-item p:last-child {
+    color: #ffffff;
+    font-size: 16px;
+}
+#bouquetTitle {
+    color: #ff9fc5;
+    font-size: 22px;
+    margin: 10px 0 20px;
+    text-shadow: 0 0 12px #ff69a4;
+}
+.rose-petal {
+    filter: drop-shadow(0 3px 4px rgba(70, 0, 25, 0.45));
+    transition: filter 0.3s ease;
+}
+
+.rose-petal:hover {
+    filter: drop-shadow(0 0 8px rgba(255, 100, 160, 0.8));
+    cursor: pointer;
+}
+.realistic-rose {
+    animation: bouquetAppear 1.5s ease-out;
+    filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.35));
+}
+
+@keyframes bouquetAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+.realistic-rose {
+    transform-origin: 50% 90%;
+    animation:
+        bouquetAppear 1.5s ease-out,
+        bouquetSway 4s ease-in-out 1.5s infinite;
+}
+
+@keyframes bouquetSway {
+    0%, 100% {
+        transform: rotate(-1deg);
+    }
+
+    50% {
+        transform: rotate(1deg);
+    }
+}
+/* Анимация появления букета */
+@keyframes bouquetAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.85) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+#flower {
+    animation: bouquetAppear 1s ease-out;
+}
+.bouquet-animation {
+    animation: bouquetAppear 1s ease-out;
+}
+.flower-particle {
+    position: fixed;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #fff7c2, #ffb6d9);
+    box-shadow: 0 0 10px #ffb6d9;
+    pointer-events: none;
+    z-index: 9999;
+
+    animation: particleBurst 0.7s ease-out forwards;
+}
+
+@keyframes particleBurst {
+    0% {
+        transform: rotate(var(--angle)) translateX(0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(var(--angle)) translateX(45px) scale(0);
+        opacity: 0;
+    }
+}

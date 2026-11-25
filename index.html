@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Букет пожеланий</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="game">
+        <h1>Букет пожеланий</h1>
+       <h2 id="bouquetTitle">Букет дня 🌸</h2>
+        <p class="subtitle">Каждый лепесток — маленькое чудо</p>
+
+        <div class="bouquet">
+            <div class="flower" id="flower">
+                <div class="stem"></div>
+                <div class="center"></div>
+            </div>
+        </div>
+
+        <p id="timer">Следующий лепесток через 01:00:00</p>
+
+        <button id="pickButton">Сорвать лепесток</button>
+<button id="collectionButton">Моя коллекция 💐</button>
+<div id="collection" class="collection hidden">
+    <h2>Моя коллекция 💐</h2>
+    <div id="collectionContent">
+        Здесь будут твои букеты и пожелания.
+    </div>
+    <button id="closeCollection">Закрыть</button>
+</div>
+
+        <div class="wish" id="wish">
+            Твоё пожелание появится здесь 🌸
+        </div>
+
+        <p class="counter" id="counter">Сорвано лепестков: 0</p>
+    </main>
+
+    <script src="game.js"></script>
+</body>
+</html>
